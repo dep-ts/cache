@@ -1,0 +1,30 @@
+{
+  "name": "@dep/cache",
+  "version": "1.0.0",
+  "description": "Tiny, type-safe cache with in-memory, file, and browser persistence backends.",
+  "exports": "./src/main.ts",
+  "author": {
+    "name": "Estarlin R.",
+    "email": "dev@estarlincito.com",
+    "url": "https://estarlincito.com"
+  },
+  "homepage": "https://github.com/dep-ts/cache#readme",
+  "repository": "https://github.com/dep-ts/cache",
+  "bugs": "https://github.com/dep-ts/cache/issues",
+  "keywords": [
+    "cache",
+    "memory",
+    "disk",
+    "localstorage",
+    "persistence",
+    "deno",
+    "browser",
+    "typescript",
+    "jsr"
+  ],
+  "license": "MIT",
+  "publish": {
+    "include": ["src", "LICENSE", "README.md"],
+    "exclude": ["**/tests/**"]
+  }
+}

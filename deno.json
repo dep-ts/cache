@@ -1,6 +1,6 @@
 {
   "name": "@dep/cache",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "exports": "./src/main.ts",
   "compilerOptions": {
     "strict": true
@@ -14,14 +14,25 @@
     "build": "deno run --allow-read src/build.ts",
     "dev": "deno run --allow-env --allow-net --watch src/main.ts",
     "check-types": "deno check src/**/*.ts && deno publish --check",
+    "docs": "lineo md 'src/**/*.ts' --outFile code.md --outDir temp",
     "lint": "deno lint",
     "fmt": "deno fmt",
-    "prepublish": "deno lint && deno fmt",
-    "publish": "deno task prepublish && jsr publish ./"
+    "clean": "rm -rf dist",
+    "pack": "deno compile -A -o cache ./cli.ts",
+    "prerelease": "deno lint && deno fmt",
+    "release": "deno task prerelease && jsr publish ./"
   },
   "lint": {
     "rules": {
       "tags": ["recommended"]
     }
+  },
+  "fmt": {
+    "useTabs": false,
+    "lineWidth": 80,
+    "indentWidth": 2,
+    "singleQuote": true,
+    "semiColons": true,
+    "trailingCommas": "onlyMultiLine"
   }
 }

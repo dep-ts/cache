@@ -1,6 +1,6 @@
 {
   "name": "@dep/cache",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Tiny, type-safe cache with in-memory, file, and browser persistence backends.",
   "exports": "./src/main.ts",
   "author": {

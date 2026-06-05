@@ -1,8 +1,8 @@
-# @deb/cache 💾
+# @dep/cache 💾
 
 > Tiny, type-safe cache with in-memory, file, and browser persistence backends.
 
-## [![JSR version](https://jsr.io/badges/@deb/cache)](https://jsr.io/@deb/cache)
+## [![JSR version](https://jsr.io/badges/@dep/cache)](https://jsr.io/@dep/cache)
 
 ## Features ✨
 
@@ -19,19 +19,19 @@
 - **Deno**:
 
   ```bash
-  deno add jsr:@deb/cache
+  deno add jsr:@dep/cache
   ```
 
 - **Node.js (18+) or Browsers**:
 
   ```bash
-  npx jsr add @deb/cache
+  npx jsr add @dep/cache
   ```
 
   Then import as an ES module:
 
   ```typescript
-  import { Memory, Disk, Storage, Error, type Value } from '@deb/cache';
+  import { Memory, Disk, Storage, Error, type Value } from '@dep/cache';
   ```
 
 ---
@@ -43,7 +43,7 @@
 #### `Memory` – In-memory cache
 
 ```ts
-import { Memory } from '@deb/cache';
+import { Memory } from '@dep/cache';
 
 const cache = new Memory();
 cache.set('theme', 'dark');
@@ -57,7 +57,7 @@ console.log(cache.size()); // => 3
 #### `Disk` – File-based persistent cache
 
 ```ts
-import { Disk } from '@deb/cache';
+import { Disk } from '@dep/cache';
 //NOTE: Disk is Deno only
 
 const cache = new Disk('config/app.json');
@@ -74,7 +74,7 @@ console.log(await cache.get('user')); // => "alice"
 #### `Storage` – Browser `localStorage` cache
 
 ```ts
-import { Storage } from '@deb/cache';
+import { Storage } from '@dep/cache';
 
 const cache = new Storage('my-app');
 cache.set('lang', 'es');
@@ -86,7 +86,7 @@ console.log(cache.get('lang')); // => "es"
 #### Error handling
 
 ```ts
-import { Error } from '@deb/cache';
+import { Error } from '@dep/cache';
 
 try {
   cache.set(123, 'invalid'); // throws
